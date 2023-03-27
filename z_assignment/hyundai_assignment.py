@@ -24,11 +24,11 @@ class AppiumConfig:
 class Test_hyundai(AppiumConfig):
     def test_signup_page(self):
         self.driver.find_element(AppiumBy.ID, "com.bsl.hyundai:id/txt_signup").click()
-        self.driver.find_element(AppiumBy.ID,"com.bsl.hyundai:id/edtFullname").send_keys("Shubham")
-        self.driver.find_element(AppiumBy.ID,"com.bsl.hyundai:id/edtMobileNumber").send_keys("1234567891")
-        self.driver.find_element(AppiumBy.ID,"com.bsl.hyundai:id/edtEmailAddress").send_keys("shubham@gmail")
-        self.driver.find_element(AppiumBy.ID,"com.bsl.hyundai:id/edtPasswordRegis").send_keys("Password@123")
-        self.driver.find_element(AppiumBy.ID,"com.bsl.hyundai:id/edtConfirmedPasswordRegis").send_keys("Password@123")
-        self.driver.find_element(AppiumBy.ID,"com.bsl.hyundai:id/checkAcceptTermsCondition").click()
-        self.driver.find_element(AppiumBy.ID,"com.bsl.hyundai:id/btnRegisterOnRegis").click()
+        self.driver.find_element(AppiumBy.ID, "com.bsl.hyundai:id/edtFullname").send_keys("Shubham")
+        self.driver.find_element(AppiumBy.ID, "com.bsl.hyundai:id/edtMobileNumber").send_keys("1234567891")
+        self.driver.find_element(AppiumBy.ID, "com.bsl.hyundai:id/edtEmailAddress").send_keys("shubham@gmail")
+        self.driver.find_element(AppiumBy.ID, "com.bsl.hyundai:id/edtPasswordRegis").send_keys("Password@123")
+        self.driver.find_element(AppiumBy.ID, "com.bsl.hyundai:id/edtConfirmedPasswordRegis").send_keys("Password@123")
+        self.driver.find_element(AppiumBy.ID, "com.bsl.hyundai:id/checkAcceptTermsCondition").click()
+        self.driver.find_element(AppiumBy.ID, "com.bsl.hyundai:id/btnRegisterOnRegis").click()
         time.sleep(10)

@@ -1,3 +1,4 @@
+import base64
 import time
 import pytest
 from appium import webdriver
@@ -16,7 +17,10 @@ class AppiumConfig:
 
         self.driver = webdriver.Remote(command_executor="http://localhost:4723/wd/hub", desired_capabilities=des_cap)
         self.driver.implicitly_wait(15)
+        self.driver.start_recording_screen()
         yield
+        encoded = self.driver.stop_recording_screen()
+        open("recording.mp4", "wb").write(base64.b64decode(encoded))
         self.driver.quit()
 
 class TestArts(AppiumConfig):

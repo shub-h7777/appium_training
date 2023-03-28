@@ -43,5 +43,4 @@ class TestArts(AppiumConfig):
 
         self.driver.find_element(AppiumBy.XPATH, "//*[contains(@text,'Himal')]").click()
         self.driver.implicitly_wait(30)
-
         time.sleep(5)

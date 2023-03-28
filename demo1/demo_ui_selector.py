@@ -22,7 +22,8 @@ class AppiumConfig:
 
 class TestAndroidDeviceCloud(AppiumConfig):
     def test_login(self):
-        self.driver.find_element(AppiumBy.ANDROID_UIAUTOMATOR, 'UiSelector().text("Dismiss")').click()
+        if len(self.driver.find_elements(AppiumBy.ANDROID_UIAUTOMATOR, 'UiSelector().text("Dismiss")')) == 1:
+            self.driver.find_element(AppiumBy.ANDROID_UIAUTOMATOR, 'UiSelector().text("Dismiss")').click()
         self.driver.find_element(AppiumBy.ANDROID_UIAUTOMATOR, 'UiSelector().text("Sign in")').click()
         self.driver.find_element(AppiumBy.ANDROID_UIAUTOMATOR, 'UiSelector().text("Sign in")').click()
         self.driver.find_element(AppiumBy.ANDROID_UIAUTOMATOR,

@@ -70,7 +70,7 @@ class Test_Swag_Labs(AppiumConfig):
 
 
 
-        card_details=self.driver.find_element(AppiumBy.XPATH,'//XCUIElementTypeStaticText[contains(@name,"Payment Information")]').text
+        card_details=self.driver.find_element(AppiumBy.XPATH,'//XCUIElementTypeStaticText[contains(@name,"SauceCard")]').text
         print(card_details)
 
 
